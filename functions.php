@@ -73,12 +73,30 @@ if ( ! function_exists( 'grvrocks_2018_setup' ) ) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
+		// add_theme_support( 'custom-logo', array(
+		// 	'height'      => 250,
+		// 	'width'       => 250,
+		// 	'flex-width'  => true,
+		// 	'flex-height' => true,
+		// ) );
+
+		/**
+		 * Add support for Jetpack social menu.
+		 *
+		 * @link https://jetpack.com/support/social-menu/
+		 */
+		 add_theme_support( 'jetpack-social-menu' );
+
+
+		 /**
+		  * Add support for Gutenberg wide images.
+		  *
+		  * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
+		  */
+		 add_theme_support( 'gutenberg', array(
+        'wide-images' => true,
+			) );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'grvrocks_2018_setup' );
@@ -101,15 +119,15 @@ add_action( 'after_setup_theme', 'grvrocks_2018_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function grvrocks_2018_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'grvrocks-2018' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'grvrocks-2018' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	// register_sidebar( array(
+	// 	'name'          => esc_html__( 'Sidebar', 'grvrocks-2018' ),
+	// 	'id'            => 'sidebar-1',
+	// 	'description'   => esc_html__( 'Add widgets here.', 'grvrocks-2018' ),
+	// 	'before_widget' => '<section id="%1$s" class="widget %2$s">',
+	// 	'after_widget'  => '</section>',
+	// 	'before_title'  => '<h2 class="widget-title">',
+	// 	'after_title'   => '</h2>',
+	// ) );
 }
 add_action( 'widgets_init', 'grvrocks_2018_widgets_init' );
 
@@ -126,6 +144,9 @@ function grvrocks_2018_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// Google fonts
+	wp_enqueue_style( 'grvrocks-2018-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:600|Rufina:400,700' );
 }
 add_action( 'wp_enqueue_scripts', 'grvrocks_2018_scripts' );
 
@@ -155,4 +176,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
