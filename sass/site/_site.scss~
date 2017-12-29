@@ -20,7 +20,6 @@
 
   .site-title {
     margin: 0;
-    font-size: 2.4em;
 
     a {
       text-decoration: none;
@@ -30,7 +29,7 @@
 
 .header-left {
   display: flex;
-  align-items: last baseline;
+  align-items: last-baseline;
   flex-direction: row;
   justify-content: flex-start;
 }

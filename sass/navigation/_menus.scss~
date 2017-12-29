@@ -2,7 +2,6 @@
 	width: auto;
 	position: relative;
 	margin-left: auto;
-	font-family: $font__headings;
 
 	ul {
 		display: none;
@@ -63,7 +62,6 @@
 	a {
 		display: block;
 		text-decoration: none;
-		padding: 0 8px;
 	}
 
 	.current_page_item > a,
@@ -114,7 +112,7 @@
 
 //Jetpack social menu
 .jetpack-social-navigation {
-	margin-left: 16px;
+	margin-left: 20px;
 	ul.menu {
 		margin-bottom: 0;
 		display: flex;
@@ -124,9 +122,9 @@
 	}
 
 	li a::before {
-		font-size: 26px;
+		font-size: 24px;
 	}
 	li a {
-		margin-right: 3px;
+		margin-right: 0px;
 	}
 }
