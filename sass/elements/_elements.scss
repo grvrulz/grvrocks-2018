@@ -1,5 +1,6 @@
 html {
 	box-sizing: border-box;
+	overflow-x: hidden;
 }
 
 *,
@@ -29,6 +30,10 @@ img {
 
 figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+iframe {
+	width: 100%;
 }
 
 @import "tables";
