@@ -80,14 +80,6 @@ if ( ! function_exists( 'grvrocks_2018_setup' ) ) :
 		// 	'flex-height' => true,
 		// ) );
 
-		/**
-		 * Add support for Jetpack social menu.
-		 *
-		 * @link https://jetpack.com/support/social-menu/
-		 */
-		 add_theme_support( 'jetpack-social-menu' );
-
-
 		 /**
 		  * Add support for Gutenberg wide images.
 		  *
