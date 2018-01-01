@@ -103,10 +103,10 @@
 
 		a {
 			padding: 6px;
-			@include font-size(2);
+			@include font-size(1.5);
 		}
 		ul ul a {
-			@include font-size(1.75);
+			@include font-size(1.25);
 		}
 	}
 
