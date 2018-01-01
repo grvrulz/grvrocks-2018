@@ -768,6 +768,10 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
+  .blog .site-main #infinite-handle {
+    display: block;
+    width: 100%;
+    text-align: center; }
 
 .blog .post,
 .archive .post {

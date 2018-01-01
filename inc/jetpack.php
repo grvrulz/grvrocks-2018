@@ -19,7 +19,9 @@ function grvrocks_2018_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
 		'render'    => 'grvrocks_2018_infinite_scroll_render',
+		'footer_widgets' => false,
 		'footer'    => 'page',
+		'wrapper'   => false,
 	) );
 
 	// Add theme support for Responsive Videos.
@@ -42,8 +44,8 @@ function grvrocks_2018_jetpack_setup() {
 			'page'       => true,
 		),
 	) );
-	
-	
+
+
 	/**
 	 * Add support for Jetpack social menu.
 	 *
