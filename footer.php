@@ -15,15 +15,18 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'grvrocks-2018' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'grvrocks-2018' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'grvrocks-2018' ), 'grvrocks-2018', '<a href="https://gaurav.blog">Gaurav Pareek</a>' );
-			?>
+			<span>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'grvrocks-2018' ) ); ?>"><?php
+					/* translators: %s: CMS name, i.e. WordPress. */
+					printf( esc_html__( 'Proudly powered by %s', 'grvrocks-2018' ), 'WordPress' );
+				?></a>
+			</span>
+			<span>
+				<?php
+					/* translators: 1: Theme name, 2: Theme author. */
+					printf( esc_html__( 'Built with all the love in the world', 'grvrocks-2018' ) );
+				?>
+			</span>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
