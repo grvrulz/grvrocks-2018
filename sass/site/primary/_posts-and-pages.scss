@@ -48,6 +48,13 @@
 		display: block;
 		width: 100%;
 		text-align: center;
+
+		.span,
+		button {
+			width: 100%;
+			height: 100%;
+			@include font-size(2);
+		}
 	}
 }
 .blog .post,
@@ -129,7 +136,9 @@
 
 
 .blog .post:nth-of-type(3n+1),
-.archive .post:nth-of-type(3n+1) {
+.archive .post:nth-of-type(3n+1),
+.blog .post:nth-of-type(3n+2):last-of-type,
+.archive .post:nth-of-type(3n+2):last-of-type {
   width: 100%;
   margin-right: 0;
 }
