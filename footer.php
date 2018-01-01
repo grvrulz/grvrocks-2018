@@ -14,6 +14,14 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+		<div class="footer-widgets">
+			<aside class="widget-area footer-widgets-1">
+				<?php dynamic_sidebar( 'footer-1' ); ?>
+			</aside><!-- #secondary -->
+			<aside class="widget-area footer-widgets-2">
+				<?php dynamic_sidebar( 'footer-2' ); ?>
+			</aside><!-- #secondary -->
+		</div>
 		<div class="site-info">
 			<span>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'grvrocks-2018' ) ); ?>"><?php

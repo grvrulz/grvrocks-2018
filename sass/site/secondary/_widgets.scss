@@ -5,4 +5,20 @@
 	select {
 		max-width: 100%;
 	}
+
+	ul,ol {
+		margin-left: 0;
+		padding-left: 0;
+		list-style: none;
+
+		li {
+			padding: 6px 0 4px;
+			// border-bottom: 1px dotted $color__text-inverted;
+		}
+
+	}
+
+	.widget-title {
+		@include font-size(1.5);
+	}
 }
