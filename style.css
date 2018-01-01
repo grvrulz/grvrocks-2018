@@ -288,7 +288,7 @@ html {
 *:after {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit;
-  transition: all 0.3s; }
+  transition: all 0.5s ease; }
 
 body {
   background: #fff;
@@ -438,10 +438,96 @@ a {
   margin-left: auto;
   font-family: "Montserrat", sans-serif; }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
-    padding-left: 0; }
+    padding-left: 0;
+    text-align: center; }
+    .main-navigation ul ul {
+      display: flex;
+      flex-direction: column;
+      background: rgba(31, 32, 33, 0.5);
+      font-size: 15px;
+      font-size: 0.9375rem; }
+  .main-navigation li a {
+    display: block;
+    text-decoration: none;
+    padding: 0 8px;
+    color: #f2f2f2; }
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block; }
+
+@media (max-width: 37.5em) {
+  .menu-toggle {
+    background: #1f2021;
+    color: #f2f2f2;
+    border: none;
+    box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-transform: uppercase; }
+  .menu-close {
+    position: fixed;
+    top: 4px;
+    right: 8px;
+    font-size: 0;
+    z-index: 999999999;
+    border: none;
+    background: transparent; }
+    .menu-close::after {
+      display: block;
+      content: '\00d7';
+      font-size: 80px;
+      font-size: 5rem;
+      color: #f2f2f2;
+      transform: translateY(-200%); }
+  .menu-bnm-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999998;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #1f2021; }
+    .menu-bnm-container a {
+      padding: 6px;
+      font-size: 32px;
+      font-size: 2rem; }
+    .menu-bnm-container ul ul a {
+      font-size: 28px;
+      font-size: 1.75rem; } }
+
+.main-navigation.toggled .menu-close::after {
+  transform: translateY(0); }
+
+.main-navigation.toggled .menu-bnm-container {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: transform 0.4s, opacity 0.4s; }
+
+@media screen and (min-width: 37.5em) {
+  .menu-toggle,
+  .menu-close {
+    display: none; }
+  .main-navigation ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start; }
+    .main-navigation ul a {
+      color: #2a2a2a; }
+    .main-navigation ul li:hover > ul,
+    .main-navigation ul li.focus > ul {
+      left: auto; }
     .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
@@ -449,45 +535,16 @@ a {
       top: 100%;
       left: -999em;
       z-index: 99999;
-      display: flex;
-      flex-direction: column;
-      background: #1f2021; }
-      .main-navigation ul ul ul {
-        left: -999em;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
+      margin-left: 0; }
+      .main-navigation ul ul :hover > a,
+      .main-navigation ul ul .focus > a,
+      .main-navigation ul ul a:hover,
+      .main-navigation ul ul a.focus {
+        background: #f7a6b8; }
       .main-navigation ul ul a {
         width: 200px;
         padding: 8px 14px;
-        color: #f2f2f2; }
-      .main-navigation ul ul :hover > a,
-      .main-navigation ul ul .focus > a {
-        background: #f7a6b8; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none;
-    padding: 0 8px; }
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: flex-start; } }
+        color: #f2f2f2; } }
 
 .comment-navigation,
 .posts-navigation,
@@ -714,7 +771,7 @@ a {
 
 .blog .post,
 .archive .post {
-  width: 50%;
+  width: 100%;
   margin: 0;
   background-size: cover;
   background-repeat: no-repeat;
@@ -781,6 +838,9 @@ a {
   margin-right: 0; }
 
 @media screen and (min-width: 600px) {
+  .blog .post,
+  .archive .post {
+    width: 50%; }
   .blog .post:nth-of-type(3n+1) .entry-title,
   .archive .post:nth-of-type(3n+1) .entry-title {
     font-size: 60.8px;

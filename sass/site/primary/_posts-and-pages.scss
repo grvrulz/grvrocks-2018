@@ -47,7 +47,7 @@
 }
 .blog .post,
 .archive .post {
-	width: 50%;
+	width: 100%;
 	margin: 0;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -129,6 +129,11 @@
   margin-right: 0;
 }
 @media screen and (min-width: 600px) {
+
+	.blog .post,
+	.archive .post {
+		width: 50%;
+	}
 	.blog .post:nth-of-type(3n+1) .entry-title,
 	.archive .post:nth-of-type(3n+1) .entry-title {
     @include font-size(3.8);

@@ -50,7 +50,8 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'grvrocks-2018' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'grvrocks-2018' ); ?></button>
+			<button class="menu-close" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Close menu', 'grvrocks-2018' ); ?></button>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
