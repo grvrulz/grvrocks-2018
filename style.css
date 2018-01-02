@@ -227,7 +227,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: "Vollkorn", serif;
+  font-family: "Neuton", serif;
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.5; }
@@ -866,13 +866,13 @@ a {
     font-size: 3.8rem; } }
 
 .single .post,
-.page .post {
+.page .page {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center; }
   .single .post .entry-header,
-  .page .post .entry-header {
+  .page .page .entry-header {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -884,7 +884,7 @@ a {
     background-repeat: no-repeat;
     background-position: center; }
     .single .post .entry-header::before,
-    .page .post .entry-header::before {
+    .page .page .entry-header::before {
       width: 100%;
       height: 100%;
       position: absolute;
@@ -895,8 +895,8 @@ a {
       z-index: 1;
       content: " "; }
     .single .post .entry-header .entry-title, .single .post .entry-header .entry-meta,
-    .page .post .entry-header .entry-title,
-    .page .post .entry-header .entry-meta {
+    .page .page .entry-header .entry-title,
+    .page .page .entry-header .entry-meta {
       width: 90%;
       max-width: 720px;
       margin: 0 auto;
@@ -906,66 +906,66 @@ a {
       font-size: 1.4rem;
       z-index: 2; }
       .single .post .entry-header .entry-title a, .single .post .entry-header .entry-meta a,
-      .page .post .entry-header .entry-title a,
-      .page .post .entry-header .entry-meta a {
+      .page .page .entry-header .entry-title a,
+      .page .page .entry-header .entry-meta a {
         color: #f2f2f2;
         text-decoration: none; }
     .single .post .entry-header .entry-title,
-    .page .post .entry-header .entry-title {
+    .page .page .entry-header .entry-title {
       font-size: 51.2px;
       font-size: 3.2rem;
       margin-bottom: 10px; }
   .single .post .entry-content,
-  .page .post .entry-content {
+  .page .page .entry-content {
     max-width: 720px;
     margin: 40px auto 20px; }
     .single .post .entry-content .alignwide,
-    .page .post .entry-content .alignwide {
+    .page .page .entry-content .alignwide {
       margin-left: -135px;
       margin-right: -135px;
       max-width: calc(100%+270px); }
     .single .post .entry-content .alignfull,
-    .page .post .entry-content .alignfull {
+    .page .page .entry-content .alignfull {
       margin-left: 50%;
       width: 100vw;
       transform: translateX(-50%); }
       .single .post .entry-content .alignfull img,
-      .page .post .entry-content .alignfull img {
+      .page .page .entry-content .alignfull img {
         width: 100vw;
         max-width: 100vw;
         margin: 0;
         padding: 0; }
     .single .post .entry-content .aligncenter,
-    .page .post .entry-content .aligncenter {
+    .page .page .entry-content .aligncenter {
       text-align: center; }
     .single .post .entry-content .wp-block-button.aligncenter,
-    .page .post .entry-content .wp-block-button.aligncenter {
+    .page .page .entry-content .wp-block-button.aligncenter {
       left: 50%;
       transform: translateX(-50%); }
     .single .post .entry-content *[class*="wp-block"],
-    .page .post .entry-content *[class*="wp-block"] {
+    .page .page .entry-content *[class*="wp-block"] {
       margin-bottom: 1.5em; }
     .single .post .entry-content .wp-block-quote,
-    .page .post .entry-content .wp-block-quote {
+    .page .page .entry-content .wp-block-quote {
       font-size: 24px;
       font-size: 1.5rem;
       font-style: italic;
       padding-left: 2em;
       border-left: 3px solid #2a2a2a; }
       .single .post .entry-content .wp-block-quote cite,
-      .page .post .entry-content .wp-block-quote cite {
+      .page .page .entry-content .wp-block-quote cite {
         font-size: 16px;
         font-size: 1rem;
         margin-top: 0; }
         .single .post .entry-content .wp-block-quote cite::before,
-        .page .post .entry-content .wp-block-quote cite::before {
+        .page .page .entry-content .wp-block-quote cite::before {
           content: "― "; }
     .single .post .entry-content .wp-block-pullquote,
-    .page .post .entry-content .wp-block-pullquote {
+    .page .page .entry-content .wp-block-pullquote {
       padding: 2.4em 0; }
       .single .post .entry-content .wp-block-pullquote > p,
-      .page .post .entry-content .wp-block-pullquote > p {
-        font-family: "Vollkorn", serif;
+      .page .page .entry-content .wp-block-pullquote > p {
+        font-family: "Neuton", serif;
         font-size: 35.2px;
         font-size: 2.2rem;
         margin: 0 0 1em; }

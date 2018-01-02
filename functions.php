@@ -147,7 +147,7 @@ function grvrocks_2018_scripts() {
 	}
 
 	// Google fonts
-	wp_enqueue_style( 'grvrocks-2018-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:600|Vollkorn:400,400i' );
+	wp_enqueue_style( 'grvrocks-2018-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:600|Neuton:400,400i' );
 }
 add_action( 'wp_enqueue_scripts', 'grvrocks_2018_scripts' );
 
