@@ -231,7 +231,12 @@
 		.alignwide {
 			margin-left: -135px;
 			margin-right: -135px;
-			max-width: calc(100%+270px);
+			width: calc(100% + 270px);
+			max-width: calc(100% + 270px);
+
+			@media(max-width: 720px) {
+				max-width: 100%;
+			}
 		}
 
 		.alignfull {
@@ -251,13 +256,12 @@
 			text-align: center;
 		}
 
-		.wp-block-button.aligncenter {
-			left: 50%;
-			transform: translateX(-50%);
-		}
-
 		*[class*="wp-block"] {
 			margin-bottom: 1.5em;
+		}
+
+		.wp-block-image img {
+		  width: 100%;
 		}
 
 		.wp-block-quote {
