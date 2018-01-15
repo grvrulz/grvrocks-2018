@@ -226,15 +226,13 @@
 		max-width: 720px;
 		margin: 40px auto 20px;
 
-
-
 		.alignwide {
 			margin-left: -135px;
 			margin-right: -135px;
-			width: calc(100% + 270px);
-			max-width: calc(100% + 270px);
+			width: calc( 100% + 270px);
+			max-width: calc( 100% + 270px );
 
-			@media(max-width: 720px) {
+			@media only screen and (max-width: 720px) {
 				max-width: 100%;
 			}
 		}
