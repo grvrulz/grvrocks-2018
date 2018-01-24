@@ -82,7 +82,7 @@
 
 	transform: translate3d(0, 0, 0);
 
-	* {
+	span, div, h1, h2 , p, a {
 		color: #ffffff;
 	}
 
@@ -139,6 +139,14 @@
 			display: block;
 			background: #fff;
 			margin: 40px 0;
+		}
+
+		.tags-links {
+			display: block;
+		}
+
+		a:hover {
+			border-bottom: thin dotted $color__link-hover;
 		}
 	}
 
