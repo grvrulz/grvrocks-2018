@@ -11,7 +11,7 @@
 <?php if ( is_singular() ) : ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
-		<header class="entry-header" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post_id, 'large' ); ?>);">
+		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' );
 
 			if ( 'post' === get_post_type() ) : ?>

@@ -18,3 +18,8 @@ a {
 		outline: 0;
 	}
 }
+
+.entry a:hover,
+.comment a:hover {
+	border-bottom: thin dotted $color__link;
+}
