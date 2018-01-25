@@ -10,7 +10,7 @@
 ?>
 <?php if ( is_singular() ) : ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="background-image: url(<?php echo get_the_post_thumbnail_url( $post_id, 'large' ); ?>);">
 		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' );
 
@@ -54,7 +54,7 @@
 
 <?php else: ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="background-image: url(<?php echo get_the_post_thumbnail_url( $post_id, 'large' ); ?>);">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 		<header class="entry-header">
 			<?php
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
