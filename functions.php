@@ -101,7 +101,7 @@ add_action( 'after_setup_theme', 'grvrocks_2018_setup' );
  * @global int $content_width
  */
 function grvrocks_2018_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'grvrocks_2018_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'grvrocks_2018_content_width', 720 );
 }
 add_action( 'after_setup_theme', 'grvrocks_2018_content_width', 0 );
 
