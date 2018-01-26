@@ -293,5 +293,10 @@
 				margin: 0 0 1em;
 			}
 		}
+
+		.wp-block-button .wp-block-button__link {
+			font-family: $font__headings;
+			@include font-size(1);
+		}
 	}
 }
