@@ -20,7 +20,7 @@ if ( ! function_exists( 'grvrocks_2018_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Grvrocks 2018, use a find and replace
-		 * to change 'grvrocks-2018' to the name of your theme in all the template files.
+		 * to change 'grvrocks-2018' to the name of your theme in all the template files.font-weight: normal;
 		 */
 		load_theme_textdomain( 'grvrocks-2018', get_template_directory() . '/languages' );
 
@@ -147,7 +147,7 @@ function grvrocks_2018_scripts() {
 	}
 
 	// Google fonts
-	wp_enqueue_style( 'grvrocks-2018-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:600|Neuton:400,400i' );
+	wp_enqueue_style( 'grvrocks-2018-fonts', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Neuton:400,400i' );
 }
 add_action( 'wp_enqueue_scripts', 'grvrocks_2018_scripts' );
 

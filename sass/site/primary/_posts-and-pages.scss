@@ -25,6 +25,13 @@
 	display: block;
 }
 
+.entry-header .cat-links {
+	font-family: $font__headings;
+	@include font-size(0.875);
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
 .entry-title {
 	margin: 0;
 
@@ -32,8 +39,31 @@
 		text-decoration: none;
 	}
 }
-.entry-footer a {
-	text-decoration: none;
+.entry-footer, .entry-header {
+	font-family: $font__headings;
+	@include font-size(0.9375);
+	text-transform: uppercase;
+	font-weight: normal;
+
+	a {
+		text-decoration: none;
+	}
+
+	a:hover {
+		border-bottom: thin dotted $color__link-hover;
+	}
+
+	.tags-links {
+		display: block;
+	}
+
+	.byline {
+		font-weight: bold;
+	}
+
+	.edit-link {
+		display: block;
+	}
 }
 
 // Archives
@@ -99,11 +129,11 @@
 
 
 	.entry-title {
-		@include font-size(2.8);
+		@include font-size(2.125);
 	}
 
 	.entry-content {
-		@include font-size(1.8);
+		@include font-size(1.5);
 
 		p {
 			margin: 0;
@@ -111,7 +141,6 @@
 	}
 
 	.entry-footer {
-		@include font-size(1.25);
 		&::before {
 			content: '';
 			width: 80px;
@@ -121,29 +150,23 @@
 			margin: 40px 0;
 		}
 
-		.tags-links {
-			display: block;
-		}
 
-		a:hover {
-			border-bottom: thin dotted $color__link-hover;
-		}
-	}
+	}@include font-size(1.25);
 
 }
 
+.blog .post:nth-of-type(2n-2),
+.archive .post:nth-of-type(2n-2) {
+	border-right: 1px solid transparentize( $color__text-screen, 0.8);
+}
 
-.blog .post:nth-of-type(3n+1),
-.archive .post:nth-of-type(3n+1),
-.blog .post:nth-of-type(3n+2):last-of-type,
-.archive .post:nth-of-type(3n+2):last-of-type {
+.blog .post:first-of-type,
+.archive .post:first-of-type,
+.blog .post:nth-of-type(2n-2):last-of-type,
+.archive .post:nth-of-type(2n-2):last-of-type {
   width: 100%;
   margin-right: 0;
-}
-
-.blog .post:nth-of-type(3n+2),
-.archive .post:nth-of-type(3n+2) {
-	border-right: 1px solid transparentize( $color__text-screen, 0.8);
+	border-right: none;
 }
 
 @media screen and (min-width: 600px) {
@@ -154,7 +177,6 @@
 	}
 	.blog .post:nth-of-type(3n+1) .entry-title,
 	.archive .post:nth-of-type(3n+1) .entry-title {
-    @include font-size(3.8);
 
   }
 }
@@ -180,13 +202,12 @@
 
 		position: relative;
 
-		.entry-title,.entry-meta {
+		.entry-title,.entry-meta, .cat-links {
 			width: 90%;
 			max-width: 720px;
 			margin: 0 auto;
 			text-align: left;
 
-			@include font-size(1.4);
 			z-index: 2;
 
 			a {
@@ -195,8 +216,7 @@
 		}
 
 		.entry-title {
-			@include font-size(3.2);
-			margin-bottom: 10px;
+			@include font-size(2.875);
 		}
 	}
 
@@ -229,6 +249,7 @@
 	}
 
 	.entry-content {
+		width: 720px;
 		max-width: 720px;
 		margin: 40px auto 20px;
 

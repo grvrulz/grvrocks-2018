@@ -29,7 +29,6 @@ function grvrocks_2018_jetpack_setup() {
 
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
-		'blog-display'    => 'content',
 		'post-details'    => array(
 			'stylesheet' => 'grvrocks-2018-style',
 			'date'       => '.posted-on',
